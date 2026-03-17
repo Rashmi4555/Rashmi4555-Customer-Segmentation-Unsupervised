@@ -80,12 +80,22 @@ The main script performs:
 
 ## 📊 Sample Visualizations
 
-- Executive Dashboard  
-- PCA Cluster Visualization  
-- KMeans Clustering  
-- Hierarchical Dendrogram  
-- Algorithm Comparison  
+## 📊 Sample Visualizations
 
+### Executive Dashboard  
+![Executive Dashboard](results/cluster_plots/executive_dashboard.png)
+
+### PCA Cluster Visualization  
+![PCA](results/cluster_plots/pca_analysis.png)
+
+### KMeans Clustering  
+![KMeans](results/cluster_plots/kmeans_clusters.png)
+
+### Hierarchical Dendrogram  
+![Dendrogram](results/cluster_plots/dendrogram.png)
+
+### Algorithm Comparison  
+![Comparison](results/cluster_plots/algorithm_comparison.png)
 ---
 
 ## 📁 Project Structure
