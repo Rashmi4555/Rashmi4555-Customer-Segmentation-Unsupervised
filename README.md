@@ -82,7 +82,7 @@ The main script performs:
 ## 📊 Sample Visualizations
 
 ### Executive Dashboard  
-![Executive Dashboard](results/cluster_plots/executive_dashboard.png)
+![Dashboard](results/cluster_plots/dashboard.png)
 
 ### PCA Cluster Visualization  
 ![PCA](results/cluster_plots/pca_analysis.png)
