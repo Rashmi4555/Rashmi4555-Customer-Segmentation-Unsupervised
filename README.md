@@ -78,7 +78,6 @@ The main script performs:
 
 ---
 
-## 📊 Sample Visualizations
 
 ## 📊 Sample Visualizations
 
