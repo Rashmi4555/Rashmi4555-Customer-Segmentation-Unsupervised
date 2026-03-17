@@ -1,48 +1,148 @@
-# AI-Driven Customer Intelligence System
+## 🎯 Project Title
+AI-Driven Customer Intelligence System for Strategic Business Decision Making 
 
-## 📋 Project Overview
-Advanced customer segmentation system using unsupervised learning for Aenexz Tech Pvt Ltd, Bangalore.
+## 📌 Problem Statement
+Retail businesses need to understand customer purchasing behaviour to improve marketing strategies, increase revenue and retain customers.
 
-## 🎯 Problem Statement
-A company has collected large volumes of customer data but does not know:
-- Who their most valuable customers are
-- Which customers are likely to churn
-- Which group spends the most
-- Which group responds better to offers
+The objective of this project is to segment customers into meaningful groups based on purchasing patterns using unsupervised machine learning techniques.
 
-## 📊 Dataset
-**Online Retail II Dataset** from UCI Machine Learning Repository
-- Period: December 2009 - December 2011
-- Total Records: 1,067,371
-- Cleaned Records: 805,549
-- Unique Customers: 5,878
-- Features Engineered: 15+ (RFM, behavioral, derived ratios)
 
-## 🧠 Algorithms Implemented
-- ✅ **K-Means Clustering** - 3 clusters, Silhouette: 0.6420
-- ✅ **Hierarchical Clustering** - 2 clusters, Silhouette: 0.6550 ★ BEST
-- ✅ **DBSCAN** - Density-based clustering
-- ✅ **Gaussian Mixture Model (GMM)** - 2 components
+## 📂 Dataset Description
+This project uses the Online Retail dataset containing transactional data of customers.
+
+### Features
+- InvoiceNo – Transaction ID
+- StockCode – Product Code
+- Description – Product Name
+- Quantity – Number of items purchased
+- InvoiceDate – Purchase date
+- UnitPrice – Price per item
+- CustomerID – Unique customer identifier
+- Country – Customer location
+
+
+## 🤖 Algorithms Used
+
+### 🔹 KMeans Clustering
+- Partitions customers into K clusters
+- Fast and efficient
+- Best performing algorithm in this project
+
+### 🔹 DBSCAN
+- Density-based clustering
+- Detects noise and outliers
+- No need to define number of clusters
+
+### 🔹 Hierarchical Clustering
+- Creates cluster hierarchy
+- Useful for dendrogram visualization
+
+
+## ▶️ How to Run Project
+pip install -r requirements.txt
+python main.py
+
+
+## 🧠 main.py Functionality
+
+The main script performs:
+
+- Loads dataset  
+- Runs preprocessing  
+- Performs feature engineering  
+- Trains clustering models  
+
+### Prints:
+- Silhouette Score  
+- Number of clusters  
+
+### Saves:
+- Cluster assignments  
+- Evaluation metrics  
+- Visualization outputs  
+
+---
 
 ## 📈 Key Results
-- **Best Algorithm**: Hierarchical Clustering
-- **Optimal Clusters**: 2 customer segments
-- **Best Silhouette Score**: 0.6550
-- **Davies-Bouldin Index**: 0.4467
 
-## 👥 Customer Segments Identified
-| Segment | Type | Size | Avg Spend | % Revenue |
-|---------|------|------|-----------|-----------|
-| 0 | High-Value Loyalists | 3,245 (55.2%) | £1,245.80 | 78.3% |
-| 1 | Occasional Shoppers | 2,633 (44.8%) | £342.50 | 21.7% |
+- **Number of Clusters Found:** 4  
+- **Best Algorithm:** KMeans  
+- **Silhouette Score:** ~0.52  
 
-## 💼 Business Insights
-- **Highest Revenue Segment**: Segment 0 (78.3% of revenue)
-- **Premium Marketing Target**: Segment 0 (High-Value Loyalists)
-- **Churn Risk**: Segment 1 (89 days avg recency)
-- **Retention Needed**: Segment 1 (infrequent buyers)
+### 💡 Business Insights
 
-## 🚀 How to Run
-```bash
-pip install -r requirements.txt
-python main.py --data data/raw/online_retail_II.csv
+- Identified high-value customers for loyalty programs  
+- Detected at-risk customers for retention campaigns  
+- Found frequent low-spending customers for upselling  
+- Enabled targeted marketing strategies  
+
+---
+
+## 📊 Sample Visualizations
+
+- Executive Dashboard  
+- PCA Cluster Visualization  
+- KMeans Clustering  
+- Hierarchical Dendrogram  
+- Algorithm Comparison  
+
+---
+
+## 📁 Project Structure
+customer-segmentation-unsupervised/
+│
+├── data/
+│   ├── raw/
+│   │   └── online_retail_II.csv
+│   │
+│   └── processed/
+│       ├── cleaned_data.csv
+│       ├── customers_processed.csv
+│       └── customer_features.csv
+│
+├── notebooks/
+│   ├── 01_data_preprocessing.ipynb
+│   ├── 02_eda.ipynb
+│   ├── 03_feature_engineering.ipynb
+│   ├── 04_clustering_models.ipynb
+│   ├── 05_model_comparison.ipynb
+│   └── 06_visualization.ipynb
+│
+├── src/
+│   ├── data_preprocessing.py
+│   ├── feature_engineering.py
+│   ├── evaluation.py
+│   ├── utils.py
+│   │
+│   └── clustering/
+│       ├── kmeans.py
+│       ├── dbscan.py
+│       ├── hierarchical.py
+│       └── gmm.py
+│
+├── results/
+│   ├── cluster_assignments.csv
+│   │
+│   ├── cluster_plots/
+│   │   ├── executive_dashboard.png
+│   │   ├── pca_analysis.png
+│   │   ├── kmeans_clusters.png
+│   │   ├── dendrogram.png
+│   │   ├── algorithm_comparison.png
+│   │   └── rfm_distributions.png
+│   │
+│   └── metrics/
+│       ├── final_model_selection.json
+│       └── segment_profiles.csv
+│
+├── reports/
+│   ├── final_report.pdf
+│   └── presentation.pptx
+│
+├── logs/
+│   └── sample_run.log
+│
+├── config.yaml
+├── main.py
+├── requirements.txt
+└── README.md
